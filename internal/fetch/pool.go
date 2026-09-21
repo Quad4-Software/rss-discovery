@@ -96,6 +96,10 @@ func (p *Pool) Stop() {
 		p.cancel()
 	}
 	p.wg.Wait()
+	p.http.CloseIdleConnections()
+	if p.websub != nil && p.websub.HTTP != nil {
+		p.websub.HTTP.CloseIdleConnections()
+	}
 }
 
 // EnqueueFeed schedules a feed URL (must already exist in catalog) for refresh.
@@ -302,6 +306,7 @@ func (p *Pool) fetchArticle(ctx context.Context, job artJob) error {
 		RequestsPerHostPerMin: p.cfg.Workers.RequestsPerHostPerMin,
 		MinHostGap:            time.Duration(p.cfg.Workers.MinHostGapMs) * time.Millisecond,
 	})
+	defer client.CloseIdleConnections()
 	resp, err := client.Get(ctx, job.url, "", "")
 	if err != nil {
 		return err
@@ -354,6 +359,7 @@ func (p *Pool) fetchFavicon(ctx context.Context, feedID, favURL string) {
 		RequestsPerHostPerMin: p.cfg.Workers.RequestsPerHostPerMin,
 		MinHostGap:            time.Duration(p.cfg.Workers.MinHostGapMs) * time.Millisecond,
 	})
+	defer client.CloseIdleConnections()
 	resp, err := client.Get(ctx, favURL, "", "")
 	if err != nil || resp.Status >= 400 {
 		return

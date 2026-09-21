@@ -135,6 +135,11 @@ func NewWithOptions(opts Options) *Client {
 	}
 }
 
+// CloseIdleConnections releases pooled keep-alive connections on the transport.
+func (c *Client) CloseIdleConnections() {
+	c.http.CloseIdleConnections()
+}
+
 // SSRFCheckRedirect blocks redirects to non-public http(s) targets.
 func SSRFCheckRedirect(req *http.Request, via []*http.Request) error {
 	if len(via) >= 5 {

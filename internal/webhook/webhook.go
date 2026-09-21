@@ -104,6 +104,7 @@ func (d *Dispatcher) deliver(ctx context.Context, _ *http.Client, wh store.Webho
 			return security.ValidatePublicHTTPSURL(req.URL.String())
 		},
 	}
+	defer client.CloseIdleConnections()
 
 	resp, err := client.Do(req)
 	if err != nil {
