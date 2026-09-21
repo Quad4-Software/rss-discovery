@@ -109,5 +109,7 @@ jobs:
       - name: Sign image
         env:
           DIGEST: ${{ steps.build.outputs.digest }}
-          IMAGE: ${{ steps.meta.outputs.images }}
-        run: cosign sign --yes "$(printf '%s' "$IMAGE" | head -n 1)@${DIGEST}"
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          IMAGE="$(printf '%s' "$TAGS" | head -n 1 | cut -d: -f1)"
+          cosign sign --yes "${IMAGE}@${DIGEST}"

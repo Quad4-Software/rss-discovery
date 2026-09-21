@@ -126,7 +126,7 @@ func (p *Pool) feedWorker(ctx context.Context, id int) {
 			return
 		case feedID := <-p.feedQ:
 			if err := p.refreshFeed(ctx, feedID); err != nil {
-				slog.Debug("feed worker", "id", id, "feed", feedID, "err", err)
+				slog.Debug("feed worker", "id", id, "feed", logSafe(feedID), "err", logSafe(err.Error()))
 			}
 		}
 	}
@@ -140,7 +140,7 @@ func (p *Pool) articleWorker(ctx context.Context, id int) {
 			return
 		case job := <-p.artQ:
 			if err := p.fetchArticle(ctx, job); err != nil {
-				slog.Debug("article worker", "id", id, "entry", job.entryID, "err", err)
+				slog.Debug("article worker", "id", id, "entry", logSafe(job.entryID), "err", logSafe(err.Error()))
 			}
 		}
 	}
@@ -369,6 +369,12 @@ func (p *Pool) RefreshFeed(ctx context.Context, feedID string) error {
 // FetchArticle synchronously extracts one article.
 func (p *Pool) FetchArticle(ctx context.Context, entryID, feedID, pageURL string) error {
 	return p.fetchArticle(ctx, artJob{entryID: entryID, feedID: feedID, url: pageURL})
+}
+
+// logSafe strips CR and LF so untrusted values cannot forge log entries.
+func logSafe(s string) string {
+	s = strings.ReplaceAll(s, "\n", "")
+	return strings.ReplaceAll(s, "\r", "")
 }
 
 func first(a, b string) string {
