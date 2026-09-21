@@ -39,6 +39,29 @@ RUN --mount=type=cache,target=/go/pkg/mod \
 # ----- runtime (distroless, nonroot UID 65532) -----
 FROM ${RUNTIME_IMAGE}
 
+# OCI labels. CI overrides these from git metadata at build time.
+ARG IMAGE_TITLE=rss-discovery
+ARG IMAGE_DESCRIPTION=RSS aggregation and discovery API
+ARG IMAGE_SOURCE=https://github.com/Quad4-Software/rss-discovery
+ARG IMAGE_URL=https://github.com/Quad4-Software/rss-discovery
+ARG IMAGE_DOCUMENTATION=https://github.com/Quad4-Software/rss-discovery
+ARG IMAGE_VENDOR=Quad4 Software
+ARG IMAGE_LICENSES=0BSD
+ARG IMAGE_REVISION=unknown
+ARG IMAGE_VERSION=dev
+ARG IMAGE_CREATED=
+
+LABEL org.opencontainers.image.title="${IMAGE_TITLE}" \
+      org.opencontainers.image.description="${IMAGE_DESCRIPTION}" \
+      org.opencontainers.image.source="${IMAGE_SOURCE}" \
+      org.opencontainers.image.url="${IMAGE_URL}" \
+      org.opencontainers.image.documentation="${IMAGE_DOCUMENTATION}" \
+      org.opencontainers.image.vendor="${IMAGE_VENDOR}" \
+      org.opencontainers.image.licenses="${IMAGE_LICENSES}" \
+      org.opencontainers.image.revision="${IMAGE_REVISION}" \
+      org.opencontainers.image.version="${IMAGE_VERSION}" \
+      org.opencontainers.image.created="${IMAGE_CREATED}"
+
 WORKDIR /app
 
 COPY --from=build --chown=65532:65532 /out/rss-discovery /app/rss-discovery
