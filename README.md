@@ -124,6 +124,19 @@ make docker-build
 make docker-up
 ```
 
+Published images land on GHCR after pushes to master and version tags. CI signs the digest with keyless Cosign and stamps OCI labels from the git revision.
+
+```
+ghcr.io/quad4-software/rss-discovery:latest
+```
+
+```sh
+cosign verify \
+  --certificate-identity-regexp 'https://github.com/Quad4-Software/rss-discovery/.github/workflows/docker.yml@.*' \
+  --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
+  ghcr.io/quad4-software/rss-discovery@sha256:DIGEST
+```
+
 ### Coolify
 
 Use `docker-compose.coolify.yml` (not the local compose). Point Coolify at service `rss-discovery` port `8787` (domain like `https://rss.example.com:8787`).
