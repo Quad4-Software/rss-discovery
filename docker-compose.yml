@@ -1,0 +1,43 @@
+name: rss-discovery
+
+services:
+  rss-discovery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GO_IMAGE: docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195
+        RUNTIME_IMAGE: gcr.io/distroless/cc-debian12:nonroot@sha256:9dac0a79194e45a7da0158a9c6da57b217585af0786db3845d1f0ec1a0dd182f
+    image: rss-discovery:local
+    read_only: true
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    user: "65532:65532"
+    pids_limit: 512
+    mem_limit: 1g
+    cpus: 2.0
+    ports:
+      - "8787:8787"
+      - "127.0.0.1:8788:8788"
+    environment:
+      RSS_DISCOVERY_DATA_DIR: /data
+      RSS_DISCOVERY_DB_PATH: /data/rss.duckdb
+      RSS_DISCOVERY_SEED_DIR: /data/seeds
+      RSS_DISCOVERY_SERVER_ADDR: 0.0.0.0:8787
+      RSS_DISCOVERY_METRICS_ADDR: 0.0.0.0:8788
+      RSS_DISCOVERY_LANDLOCK: "false"
+      RSS_DISCOVERY_AUTH_REQUIRED: "true"
+      RSS_DISCOVERY_PRIVACY: "true"
+    volumes:
+      - rss_data:/data:rw,Z
+      - ./deploy/config.docker.toml:/config/config.toml:ro,Z
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    restart: unless-stopped
+
+volumes:
+  rss_data:
+    driver: local

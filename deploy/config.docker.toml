@@ -1,0 +1,110 @@
+# Docker-oriented config (mounted read-only at /config/config.toml)
+
+data_dir = "/data"
+db_path = "/data/rss.duckdb"
+seed_dir = "/data/seeds"
+landlock = false
+
+[server]
+addr = "0.0.0.0:8787"
+read_timeout_sec = 15
+read_header_timeout_sec = 5
+write_timeout_sec = 30
+idle_timeout_sec = 60
+body_limit = "4M"
+max_header_bytes = 65536
+max_concurrent = 4096
+max_conn_per_ip = 64
+
+[workers]
+fetch_workers = 8
+extract_workers = 4
+queue_size = 2048
+http_timeout_sec = 20
+http_max_idle = 64
+user_agent = "Mozilla/5.0 (compatible; rss-discovery/1.0; +https://github.com/Quad4-Software/rss-discovery)"
+max_feed_bytes = 5242880
+max_article_bytes = 2097152
+concurrency_per_host = 2
+requests_per_host_per_min = 30
+min_host_gap_ms = 200
+
+[limits]
+max_total_bytes = 1073741824
+max_entries_per_feed = 200
+max_fulltext_bytes = 524288000
+entry_ttl_hours = 720
+fulltext_ttl_hours = 336
+favicon_ttl_hours = 2160
+purge_interval_min = 15
+purge_batch = 5000
+
+[search]
+fts_enabled = true
+similarity_min = 0.25
+default_limit = 25
+max_limit = 100
+
+[auth]
+required = true
+header = "Authorization"
+query_param = "api_key"
+allow_anonymous_health = true
+public_rate_per_min = 60
+public_burst = 10
+authed_reserved_concurrent = 1024
+public_max_conn_per_ip = 8
+
+[observability]
+log_file = "/data/rss-discovery.log"
+log_level = "info"
+sentry_dsn = ""
+sentry_env = "production"
+privacy_mode = true
+otlp_endpoint = ""
+access_log = true
+
+[security]
+maintenance = false
+block_probes = true
+block_scanners = true
+block_scrapers = true
+trust_proxy = true
+require_user_agent = true
+blocklist_file = "/app/data/blocklist.txt"
+blocklist_url = ""
+blocklist_reload_min = 15
+validate_upstream_url = true
+
+[metrics]
+addr = "0.0.0.0:8788"
+path = "/metrics"
+auth_token = ""
+require_auth = true
+
+[cors]
+enabled = true
+allow_origins = ["*"]
+allow_headers = ["Authorization", "Content-Type", "X-API-Key", "If-None-Match", "If-Modified-Since"]
+allow_methods = ["GET", "POST", "DELETE", "OPTIONS", "HEAD"]
+allow_credentials = false
+max_age_sec = 600
+
+[oauth]
+enabled = true
+token_ttl_sec = 3600
+default_level = "standard"
+
+[websub]
+enabled = true
+callback_url = ""
+lease_seconds = 86400
+renew_ahead_sec = 3600
+
+[cache]
+cdn_enabled = true
+max_age_sec = 30
+stale_while_revalidate_sec = 60
+
+[freshness]
+slo_seconds = 3600

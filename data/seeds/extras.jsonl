@@ -1,0 +1,7 @@
+{"title":"Kagi Small Web","url":"https://kagi.com/api/v1/smallweb/feed","site_url":"https://kagi.com/smallweb","category":"Blogs","blurb":"Kagi Small Web aggregate Atom feed"}
+{"title":"HN Frontpage","url":"https://hnrss.org/frontpage","site_url":"https://news.ycombinator.com","category":"Tech","blurb":"Hacker News via hnrss"}
+{"title":"HN Best","url":"https://hnrss.org/best","site_url":"https://news.ycombinator.com/best","category":"Tech","blurb":"Hacker News best via hnrss"}
+{"title":"HN Show","url":"https://hnrss.org/show","site_url":"https://news.ycombinator.com/show","category":"Tech","blurb":"Show HN via hnrss"}
+{"title":"Lobsters","url":"https://lobste.rs/rss","site_url":"https://lobste.rs","category":"Tech","blurb":"Lobsters"}
+{"title":"IndieBlog.page","url":"https://indieblog.page/rss","site_url":"https://indieblog.page","category":"HN Blogs","blurb":"Random posts from HN/indie personal blogs"}
+ 

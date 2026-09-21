@@ -1,0 +1,417 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "RSS Discovery API",
+    "version": "1.0.0",
+    "description": "Public feed catalog, search, discovery, and full-text cache API. Authenticate with Bearer tokens (rd_<level>_<secret>). Levels: readonly, standard, priority, admin."
+  },
+  "servers": [{"url": "/", "description": "This host"}],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "rd_<level>_<secret>"
+      },
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {"error": {"type": "string"}}
+      },
+      "Feed": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "site_url": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "category": {"type": "string"},
+          "blurb": {"type": "string"},
+          "format": {"type": "string"},
+          "language": {"type": "string"},
+          "favicon_url": {"type": "string"},
+          "source": {"type": "string"}
+        }
+      }
+    }
+  },
+  "security": [{"bearerAuth": []}, {"apiKeyHeader": []}],
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Liveness and maintenance flag",
+        "security": [],
+        "responses": {"200": {"description": "OK"}}
+      }
+    },
+    "/livez": {
+      "get": {
+        "summary": "Process alive",
+        "security": [],
+        "responses": {"200": {"description": "OK"}}
+      }
+    },
+    "/readyz": {
+      "get": {
+        "summary": "Dependency readiness",
+        "security": [],
+        "responses": {
+          "200": {"description": "Ready"},
+          "503": {"description": "Not ready"}
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "summary": "OpenAPI document",
+        "security": [],
+        "responses": {"200": {"description": "OpenAPI 3.1 JSON"}}
+      }
+    },
+    "/docs": {
+      "get": {
+        "summary": "Human-readable API docs",
+        "security": [],
+        "responses": {"200": {"description": "HTML"}}
+      }
+    },
+    "/v1/stats": {
+      "get": {
+        "summary": "Catalog and storage stats",
+        "responses": {"200": {"description": "Stats object"}}
+      }
+    },
+    "/v1/feeds": {
+      "get": {
+        "summary": "List feeds",
+        "parameters": [
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}},
+          {"name": "offset", "in": "query", "schema": {"type": "integer"}},
+          {"name": "category", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {"200": {"description": "Feed list"}}
+      },
+      "post": {
+        "summary": "Add a feed URL",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["url"],
+                "properties": {
+                  "url": {"type": "string", "format": "uri"},
+                  "title": {"type": "string"},
+                  "category": {"type": "string"},
+                  "blurb": {"type": "string"},
+                  "site_url": {"type": "string"},
+                  "refresh": {"type": "boolean"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {"description": "Created"},
+          "400": {"description": "Invalid URL"}
+        }
+      }
+    },
+    "/v1/feeds/{id}": {
+      "get": {
+        "summary": "Get feed by id",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "200": {"description": "Feed"},
+          "404": {"description": "Not found"}
+        }
+      }
+    },
+    "/v1/feeds/{id}/refresh": {
+      "post": {
+        "summary": "Refresh a feed",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Refreshed feed"}}
+      }
+    },
+    "/v1/search/feeds": {
+      "get": {
+        "summary": "Search feeds",
+        "parameters": [
+          {"name": "q", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}}
+        ],
+        "responses": {"200": {"description": "Matches"}}
+      }
+    },
+    "/v1/search/entries": {
+      "get": {
+        "summary": "Search entries",
+        "parameters": [
+          {"name": "q", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}}
+        ],
+        "responses": {"200": {"description": "Matches"}}
+      }
+    },
+    "/v1/search/content": {
+      "get": {
+        "summary": "Search full-text cache",
+        "parameters": [
+          {"name": "q", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}}
+        ],
+        "responses": {"200": {"description": "Matches"}}
+      }
+    },
+    "/v1/similar/feeds/{id}": {
+      "get": {
+        "summary": "Similar feeds",
+        "parameters": [
+          {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}},
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}}
+        ],
+        "responses": {"200": {"description": "Similar feeds"}}
+      }
+    },
+    "/v1/entries/{id}": {
+      "get": {
+        "summary": "Get entry",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Entry"}, "404": {"description": "Not found"}}
+      }
+    },
+    "/v1/entries/{id}/fulltext": {
+      "get": {
+        "summary": "Get cached full text",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Full text"}, "404": {"description": "Not cached"}}
+      },
+      "post": {
+        "summary": "Fetch and cache full text",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Full text"}}
+      }
+    },
+    "/v1/discover": {
+      "post": {
+        "summary": "Discover and enqueue a feed URL",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["url"],
+                "properties": {
+                  "url": {"type": "string", "format": "uri"},
+                  "category": {"type": "string"},
+                  "refresh": {"type": "boolean"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"202": {"description": "Accepted"}, "400": {"description": "Invalid"}}
+      }
+    },
+    "/v1/purge": {
+      "post": {
+        "summary": "Run storage purge (admin)",
+        "responses": {"200": {"description": "Purge result"}, "403": {"description": "Forbidden"}}
+      }
+    },
+    "/v1/admin/maintenance": {
+      "get": {
+        "summary": "Maintenance status (admin)",
+        "responses": {"200": {"description": "Status"}}
+      },
+      "post": {
+        "summary": "Set maintenance mode (admin)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {"enabled": {"type": "boolean"}}
+              }
+            }
+          }
+        },
+        "responses": {"200": {"description": "Updated"}}
+      }
+    },
+    "/v1/admin/tokens": {
+      "get": {
+        "summary": "List API tokens (admin)",
+        "parameters": [{"name": "revoked", "in": "query", "schema": {"type": "boolean"}}],
+        "responses": {"200": {"description": "Token list"}}
+      },
+      "post": {
+        "summary": "Create API token (admin)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name"],
+                "properties": {
+                  "name": {"type": "string"},
+                  "level": {"type": "string", "enum": ["readonly", "standard", "priority", "admin"]},
+                  "ttl": {"type": "string", "description": "Go duration, e.g. 720h"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"201": {"description": "Created with plaintext token once"}}
+      }
+    },
+    "/v1/admin/tokens/{id}": {
+      "delete": {
+        "summary": "Revoke token (admin)",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Revoked"}, "404": {"description": "Not found"}}
+      }
+    },
+    "/v1/admin/access-logs": {
+      "get": {
+        "summary": "Recent access logs (admin)",
+        "parameters": [
+          {"name": "token_id", "in": "query", "schema": {"type": "string"}},
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}}
+        ],
+        "responses": {"200": {"description": "Logs"}}
+      }
+    },
+    "/v1/opml": {
+      "get": {"summary": "Export catalog as OPML", "responses": {"200": {"description": "OPML XML"}}},
+      "post": {"summary": "Import OPML (async job)", "responses": {"202": {"description": "Job accepted"}}}
+    },
+    "/v1/discover/bulk": {
+      "post": {
+        "summary": "Bulk discover URLs (async job)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "urls": {"type": "array", "items": {"type": "string"}},
+                  "refresh": {"type": "boolean"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"202": {"description": "Job accepted"}}
+      }
+    },
+    "/v1/jobs": {
+      "get": {"summary": "List async jobs", "responses": {"200": {"description": "Jobs"}}}
+    },
+    "/v1/jobs/{id}": {
+      "get": {
+        "summary": "Get job status and items",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Job"}, "404": {"description": "Not found"}}
+      }
+    },
+    "/v1/feeds/{id}/status": {
+      "get": {
+        "summary": "Per-feed freshness status vs SLO",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Status"}}
+      }
+    },
+    "/v1/feeds/{id}/health": {
+      "get": {
+        "summary": "Feed health score (fail streak, latency p99, format drift)",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Health"}}
+      }
+    },
+    "/v1/status/freshness": {
+      "get": {"summary": "Catalog freshness SLO summary", "responses": {"200": {"description": "Summary"}}}
+    },
+    "/v1/health/feeds": {
+      "get": {"summary": "List feeds by health score", "responses": {"200": {"description": "Health list"}}}
+    },
+    "/v1/webhooks": {
+      "get": {"summary": "List webhooks", "responses": {"200": {"description": "Webhooks"}}},
+      "post": {
+        "summary": "Create signed webhook",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["url"],
+                "properties": {
+                  "url": {"type": "string"},
+                  "events": {"type": "string"},
+                  "feed_id": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"201": {"description": "Created with secret once"}}
+      }
+    },
+    "/v1/webhooks/{id}": {
+      "delete": {
+        "summary": "Delete webhook",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Deleted"}}
+      }
+    },
+    "/v1/websub": {
+      "get": {"summary": "List WebSub subscriptions", "responses": {"200": {"description": "Subscriptions"}}}
+    },
+    "/v1/websub/{id}/subscribe": {
+      "post": {
+        "summary": "Discover hub and subscribe for feed id",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"202": {"description": "Accepted"}}
+      }
+    },
+    "/v1/websub/{id}": {
+      "delete": {
+        "summary": "Unsubscribe WebSub for feed",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Unsubscribed"}}
+      }
+    },
+    "/v1/websub/callback": {
+      "get": {"summary": "WebSub hub verification", "security": [], "responses": {"200": {"description": "Challenge"}}},
+      "post": {"summary": "WebSub content notification", "security": [], "responses": {"200": {"description": "OK"}}}
+    },
+    "/oauth/token": {
+      "post": {
+        "summary": "OAuth2 client_credentials token",
+        "security": [],
+        "responses": {"200": {"description": "access_token"}}
+      }
+    },
+    "/v1/admin/oauth/clients": {
+      "get": {"summary": "List OAuth clients (admin)", "responses": {"200": {"description": "Clients"}}},
+      "post": {"summary": "Create OAuth client (admin)", "responses": {"201": {"description": "Created"}}}
+    },
+    "/v1/admin/oauth/clients/{id}": {
+      "delete": {
+        "summary": "Revoke OAuth client (admin)",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Revoked"}}
+      }
+    }
+  }
+}

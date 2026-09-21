@@ -1,0 +1,283 @@
+{"title": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "site_url": "https://www.theverge.com", "category": "Tech", "blurb": "Gadgets, policy, and culture"}
+{"title": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "site_url": "https://arstechnica.com", "category": "Tech", "blurb": "Deep tech journalism"}
+{"title": "Wired", "url": "https://www.wired.com/feed/rss", "site_url": "https://www.wired.com", "category": "Tech", "blurb": "Ideas and innovation"}
+{"title": "TechCrunch", "url": "https://techcrunch.com/feed/", "site_url": "https://techcrunch.com", "category": "Tech", "blurb": "Startups and the industry"}
+{"title": "Engadget", "url": "https://www.engadget.com/rss.xml", "site_url": "https://www.engadget.com", "category": "Tech", "blurb": "Consumer tech and reviews"}
+{"title": "Android Police", "url": "https://www.androidpolice.com/feed/", "site_url": "https://www.androidpolice.com", "category": "Tech", "blurb": "Android news and guides"}
+{"title": "CNET News", "url": "https://www.cnet.com/rss/news/", "site_url": "https://www.cnet.com", "category": "Tech", "blurb": "Product news and explainers"}
+{"title": "IEEE Spectrum", "url": "https://spectrum.ieee.org/feeds/feed.rss", "site_url": "https://spectrum.ieee.org", "category": "Tech", "blurb": "Engineering and science"}
+{"title": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "site_url": "https://www.technologyreview.com", "category": "Tech", "blurb": "Emerging technology analysis"}
+{"title": "Hacker News", "url": "https://news.ycombinator.com/rss", "site_url": "https://news.ycombinator.com", "category": "Dev", "blurb": "Startup and hacker front page"}
+{"title": "LWN.net", "url": "https://lwn.net/headlines/rss", "site_url": "https://lwn.net", "category": "Dev", "blurb": "Linux and free software"}
+{"title": "CSS-Tricks", "url": "https://css-tricks.com/feed/", "site_url": "https://css-tricks.com", "category": "Dev", "blurb": "Web design and CSS"}
+{"title": "Smashing Magazine", "url": "https://www.smashingmagazine.com/feed/", "site_url": "https://www.smashingmagazine.com", "category": "Dev", "blurb": "Design and front-end"}
+{"title": "Daring Fireball", "url": "https://daringfireball.net/feeds/main", "site_url": "https://daringfireball.net", "category": "Dev", "blurb": "Apple commentary by Gruber"}
+{"title": "JSON Feed", "url": "https://www.jsonfeed.org/feed.json", "site_url": "https://www.jsonfeed.org", "category": "Dev", "blurb": "Spec blog (JSON Feed format)"}
+{"title": "BBC News", "url": "https://feeds.bbci.co.uk/news/rss.xml", "site_url": "https://www.bbc.com/news", "category": "World", "blurb": "Global headlines"}
+{"title": "BBC Technology", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "site_url": "https://www.bbc.com/news/technology", "category": "World", "blurb": "BBC tech desk"}
+{"title": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml", "site_url": "https://www.npr.org", "category": "World", "blurb": "US public radio top stories"}
+{"title": "The Guardian World", "url": "https://www.theguardian.com/world/rss", "site_url": "https://www.theguardian.com/world", "category": "World", "blurb": "International coverage"}
+{"title": "The Guardian Technology", "url": "https://www.theguardian.com/technology/rss", "site_url": "https://www.theguardian.com/technology", "category": "World", "blurb": "Guardian tech section"}
+{"title": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "site_url": "https://www.aljazeera.com", "category": "World", "blurb": "International news"}
+{"title": "NYT Technology", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "site_url": "https://www.nytimes.com/section/technology", "category": "World", "blurb": "New York Times tech"}
+{"title": "NASA News", "url": "https://www.nasa.gov/news-release/feed/", "site_url": "https://www.nasa.gov", "category": "Science", "blurb": "Official NASA releases"}
+{"title": "Nature", "url": "https://www.nature.com/nature.rss", "site_url": "https://www.nature.com", "category": "Science", "blurb": "Scientific journal highlights"}
+{"title": "Kottke", "url": "https://feeds.kottke.org/main", "site_url": "https://kottke.org", "category": "Culture", "blurb": "Links and longform curiosities"}
+{"title": "The Atlantic", "url": "https://www.theatlantic.com/feed/all/", "site_url": "https://www.theatlantic.com", "category": "Culture", "blurb": "Ideas, politics, and culture"}
+{"title": "Aeon", "url": "https://aeon.co/feed.rss", "site_url": "https://aeon.co", "category": "Culture", "blurb": "Essays on philosophy and science"}
+{"title": "Atlas Obscura", "url": "https://www.atlasobscura.com/feeds/latest", "site_url": "https://www.atlasobscura.com", "category": "Culture", "blurb": "Curious places and stories"}
+{"title": "Quanta Magazine", "url": "https://www.quantamagazine.org/feed/", "site_url": "https://www.quantamagazine.org", "category": "Science", "blurb": "Fundamental science storytelling"}
+{"title": "EFF Updates", "url": "https://www.eff.org/rss/updates.xml", "site_url": "https://www.eff.org", "category": "World", "blurb": "Digital rights and privacy"}
+{"title": "Cloudflare Blog", "url": "https://blog.cloudflare.com/rss/", "site_url": "https://blog.cloudflare.com", "category": "Dev", "blurb": "Internet infrastructure deep dives"}
+{"title": "Phoronix", "url": "https://www.phoronix.com/rss.php", "site_url": "https://www.phoronix.com", "category": "Dev", "blurb": "Linux hardware and benchmarks"}
+{"title": "Go Blog", "url": "https://go.dev/blog/feed.atom", "site_url": "https://go.dev/blog", "category": "Dev", "blurb": "Official Go language news"}
+{"title": "Rust Blog", "url": "https://blog.rust-lang.org/feed.xml", "site_url": "https://blog.rust-lang.org", "category": "Dev", "blurb": "Official Rust language news"}
+{"title": "HN Frontpage (hnrss)", "url": "https://hnrss.org/frontpage", "site_url": "https://news.ycombinator.com", "category": "Dev", "blurb": "Hacker News with full titles"}
+{"title": "9to5Google", "url": "https://9to5google.com/feed/", "site_url": "https://9to5google.com", "category": "Tech", "blurb": "Google and Android product news"}
+{"title": "MacRumors", "url": "https://feeds.macrumors.com/MacRumors-All", "site_url": "https://www.macrumors.com", "category": "Tech", "blurb": "Apple rumors and releases"}
+{"title": "The Register", "url": "https://www.theregister.com/headlines.atom", "site_url": "https://www.theregister.com", "category": "Tech", "blurb": "Enterprise IT with bite"}
+{"title": "Android Authority", "url": "https://www.androidauthority.com/feed/", "site_url": "https://www.androidauthority.com", "category": "Tech", "blurb": "Android phones and software"}
+{"title": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "site_url": "https://www.tomshardware.com", "category": "Tech", "blurb": "PC hardware and components"}
+{"title": "Heise Online", "url": "https://www.heise.de/rss/heise-atom.xml", "site_url": "https://www.heise.de", "category": "Tech", "blurb": "German tech journalism (DE)"}
+{"title": "OMG! Ubuntu", "url": "https://www.omgubuntu.co.uk/feed", "site_url": "https://www.omgubuntu.co.uk", "category": "Tech", "blurb": "Ubuntu and desktop Linux"}
+{"title": "OMG! Linux", "url": "https://www.omglinux.com/feed/", "site_url": "https://www.omglinux.com", "category": "Tech", "blurb": "Linux apps and distros"}
+{"title": "Axios", "url": "https://www.axios.com/feeds/feed.rss", "site_url": "https://www.axios.com", "category": "World", "blurb": "Smart brevity on news"}
+{"title": "Platformer", "url": "https://www.platformer.news/rss/", "site_url": "https://www.platformer.news", "category": "Tech", "blurb": "Casey Newton on platforms"}
+{"title": "Atlantic Technology", "url": "https://www.theatlantic.com/feed/channel/technology/", "site_url": "https://www.theatlantic.com/technology", "category": "Tech", "blurb": "Tech essays from The Atlantic"}
+{"title": "Fast Company", "url": "https://www.fastcompany.com/latest/rss", "site_url": "https://www.fastcompany.com", "category": "Tech", "blurb": "Business innovation and design"}
+{"title": "Lobsters", "url": "https://lobste.rs/rss", "site_url": "https://lobste.rs", "category": "Dev", "blurb": "Computing link community"}
+{"title": "Kotlin Blog", "url": "https://blog.jetbrains.com/kotlin/feed/", "site_url": "https://blog.jetbrains.com/kotlin", "category": "Dev", "blurb": "Official Kotlin updates"}
+{"title": "Android Developers Blog", "url": "https://android-developers.googleblog.com/feeds/posts/default?alt=rss", "site_url": "https://android-developers.googleblog.com", "category": "Dev", "blurb": "Official Android platform news"}
+{"title": "GitHub Blog", "url": "https://github.blog/feed/", "site_url": "https://github.blog", "category": "Dev", "blurb": "GitHub product and community"}
+{"title": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "site_url": "https://stackoverflow.blog", "category": "Dev", "blurb": "Engineering culture and tools"}
+{"title": "DEV Community", "url": "https://dev.to/feed", "site_url": "https://dev.to", "category": "Dev", "blurb": "Developer essays and tutorials"}
+{"title": "Signal Blog", "url": "https://signal.org/blog/rss.xml", "site_url": "https://signal.org/blog", "category": "Dev", "blurb": "Private messaging engineering"}
+{"title": "Kernel.org Dist", "url": "https://www.kernel.org/feeds/kdist.xml", "site_url": "https://www.kernel.org", "category": "Dev", "blurb": "Linux kernel releases"}
+{"title": "Mozilla Blog", "url": "https://blog.mozilla.org/en/feed/", "site_url": "https://blog.mozilla.org", "category": "Dev", "blurb": "Firefox and open web"}
+{"title": "Drew DeVault", "url": "https://drewdevault.com/blog/index.xml", "site_url": "https://drewdevault.com", "category": "Dev", "blurb": "FOSS and tooling essays"}
+{"title": "Jeff Geerling", "url": "https://www.jeffgeerling.com/blog.xml", "site_url": "https://www.jeffgeerling.com", "category": "Dev", "blurb": "Homelab, Pi, and Ansible"}
+{"title": "Martin Fowler", "url": "https://martinfowler.com/feed.atom", "site_url": "https://martinfowler.com", "category": "Dev", "blurb": "Software design and architecture"}
+{"title": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "site_url": "https://simonwillison.net", "category": "Dev", "blurb": "AI tools and data journalism"}
+{"title": "Julia Evans", "url": "https://jvns.ca/atom.xml", "site_url": "https://jvns.ca", "category": "Dev", "blurb": "Friendly systems programming"}
+{"title": "Collabora", "url": "https://www.collabora.com/feed.xml", "site_url": "https://www.collabora.com", "category": "Dev", "blurb": "Open source consulting engineering"}
+{"title": "Matrix.org", "url": "https://matrix.org/blog/feed", "site_url": "https://matrix.org/blog", "category": "Dev", "blurb": "Decentralized messaging protocol"}
+{"title": "Tor Project", "url": "https://blog.torproject.org/rss.xml", "site_url": "https://blog.torproject.org", "category": "Dev", "blurb": "Anonymity network updates"}
+{"title": "PINE64", "url": "https://www.pine64.org/feed/", "site_url": "https://www.pine64.org", "category": "Dev", "blurb": "Open hardware community"}
+{"title": "HN Best (hnrss)", "url": "https://hnrss.org/best", "site_url": "https://news.ycombinator.com", "category": "Dev", "blurb": "Highest-scoring HN stories"}
+{"title": "HN 100+ points", "url": "https://hnrss.org/newest?points=100", "site_url": "https://news.ycombinator.com", "category": "Dev", "blurb": "New HN posts with 100+ points"}
+{"title": "Ars Technology Lab", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "site_url": "https://arstechnica.com", "category": "Dev", "blurb": "Ars hands-on and how-tos"}
+{"title": "Techdirt", "url": "https://www.techdirt.com/feed/", "site_url": "https://www.techdirt.com", "category": "Dev", "blurb": "Tech policy and free speech"}
+{"title": "Pluralistic", "url": "https://pluralistic.net/feed/", "site_url": "https://pluralistic.net", "category": "Dev", "blurb": "Cory Doctorow on tech and power"}
+{"title": "Deutsche Welle", "url": "https://rss.dw.com/rdf/rss-en-all", "site_url": "https://www.dw.com", "category": "World", "blurb": "German international broadcaster"}
+{"title": "CBC Top Stories", "url": "https://www.cbc.ca/cmlink/rss-topstories", "site_url": "https://www.cbc.ca", "category": "World", "blurb": "Canadian public broadcasting"}
+{"title": "France 24 English", "url": "https://www.france24.com/en/rss", "site_url": "https://www.france24.com", "category": "World", "blurb": "French international news"}
+{"title": "Le Monde English", "url": "https://www.lemonde.fr/en/rss/une.xml", "site_url": "https://www.lemonde.fr/en", "category": "World", "blurb": "Front page in English"}
+{"title": "ProPublica", "url": "https://www.propublica.org/feeds/propublica/main", "site_url": "https://www.propublica.org", "category": "World", "blurb": "Investigative journalism"}
+{"title": "LA Times World", "url": "https://www.latimes.com/world-nation/rss2.0.xml", "site_url": "https://www.latimes.com/world-nation", "category": "World", "blurb": "World and national desk"}
+{"title": "CBS News", "url": "https://www.cbsnews.com/latest/rss/main", "site_url": "https://www.cbsnews.com", "category": "World", "blurb": "US network headlines"}
+{"title": "NYT World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "site_url": "https://www.nytimes.com/section/world", "category": "World", "blurb": "New York Times world desk"}
+{"title": "BBC Business", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "site_url": "https://www.bbc.com/news/business", "category": "World", "blurb": "BBC business desk"}
+{"title": "BBC Health", "url": "https://feeds.bbci.co.uk/news/health/rss.xml", "site_url": "https://www.bbc.com/news/health", "category": "World", "blurb": "BBC health desk"}
+{"title": "NPR Science", "url": "https://feeds.npr.org/1007/rss.xml", "site_url": "https://www.npr.org/sections/science", "category": "Science", "blurb": "NPR science desk"}
+{"title": "NPR Technology", "url": "https://feeds.npr.org/1019/rss.xml", "site_url": "https://www.npr.org/sections/technology", "category": "Science", "blurb": "NPR technology desk"}
+{"title": "Guardian Science", "url": "https://www.theguardian.com/science/rss", "site_url": "https://www.theguardian.com/science", "category": "Science", "blurb": "Guardian science section"}
+{"title": "BBC Science", "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "site_url": "https://www.bbc.com/news/science_and_environment", "category": "Science", "blurb": "BBC science and environment"}
+{"title": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/all.xml", "site_url": "https://www.sciencedaily.com", "category": "Science", "blurb": "Research news summaries"}
+{"title": "ESA", "url": "https://www.esa.int/rssfeed/Our_Activities", "site_url": "https://www.esa.int", "category": "Science", "blurb": "European Space Agency"}
+{"title": "Phys.org", "url": "https://phys.org/rss-feed/", "site_url": "https://phys.org", "category": "Science", "blurb": "Physics and science research"}
+{"title": "New Scientist", "url": "https://www.newscientist.com/feed/home", "site_url": "https://www.newscientist.com", "category": "Science", "blurb": "Popular science magazine"}
+{"title": "Nature Physics", "url": "https://www.nature.com/subjects/physics.rss", "site_url": "https://www.nature.com/subjects/physics", "category": "Science", "blurb": "Nature physics highlights"}
+{"title": "Nature Computer Science", "url": "https://www.nature.com/subjects/computer-science.rss", "site_url": "https://www.nature.com/subjects/computer-science", "category": "Science", "blurb": "Nature CS highlights"}
+{"title": "Atlantic Science", "url": "https://www.theatlantic.com/feed/channel/science/", "site_url": "https://www.theatlantic.com/science", "category": "Science", "blurb": "Science essays from The Atlantic"}
+{"title": "NYT Science", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "site_url": "https://www.nytimes.com/section/science", "category": "Science", "blurb": "New York Times science"}
+{"title": "Economist Science", "url": "https://www.economist.com/science-and-technology/rss.xml", "site_url": "https://www.economist.com/science-and-technology", "category": "Science", "blurb": "Economist science and technology"}
+{"title": "Longreads", "url": "https://longreads.com/feed/", "site_url": "https://longreads.com", "category": "Culture", "blurb": "Curated longform nonfiction"}
+{"title": "Nieman Lab", "url": "https://www.niemanlab.org/feed/", "site_url": "https://www.niemanlab.org", "category": "Culture", "blurb": "Journalism and media future"}
+{"title": "404 Media", "url": "https://www.404media.co/feed/", "site_url": "https://www.404media.co", "category": "Culture", "blurb": "Independent tech journalism"}
+{"title": "Rest of World", "url": "https://restofworld.org/feed/", "site_url": "https://restofworld.org", "category": "Culture", "blurb": "Tech outside Silicon Valley"}
+{"title": "New Yorker News", "url": "https://www.newyorker.com/feed/news", "site_url": "https://www.newyorker.com/news", "category": "Culture", "blurb": "New Yorker news desk"}
+{"title": "Krebs on Security", "url": "https://krebsonsecurity.com/feed/", "site_url": "https://krebsonsecurity.com", "category": "Security", "blurb": "Investigative cybercrime reporting"}
+{"title": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "site_url": "https://thehackernews.com", "category": "Security", "blurb": "Cybersecurity news roundup"}
+{"title": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "site_url": "https://www.bleepingcomputer.com", "category": "Security", "blurb": "Malware and IT security"}
+{"title": "Wired Security", "url": "https://www.wired.com/feed/category/security/latest/rss", "site_url": "https://www.wired.com/category/security", "category": "Security", "blurb": "Wired security desk"}
+{"title": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "site_url": "https://www.darkreading.com", "category": "Security", "blurb": "Enterprise security news"}
+{"title": "OpenStreetMap Diary", "url": "https://www.openstreetmap.org/diary/rss", "site_url": "https://www.openstreetmap.org", "category": "Culture", "blurb": "Mapper diaries and notes"}
+{"title": "OpenAI News", "url": "https://openai.com/news/rss.xml", "site_url": "https://openai.com", "category": "AI", "blurb": "OpenAI product and research news"}
+{"title": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "site_url": "https://deepmind.google", "category": "AI", "blurb": "DeepMind research blog"}
+{"title": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "site_url": "https://huggingface.co/blog", "category": "AI", "blurb": "Open ML models and tools"}
+{"title": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "site_url": "https://blog.google/technology/ai", "category": "AI", "blurb": "Google AI announcements"}
+{"title": "Google Research", "url": "https://research.google/blog/rss/", "site_url": "https://research.google", "category": "AI", "blurb": "Google Research blog"}
+{"title": "Apple ML Research", "url": "https://machinelearning.apple.com/rss.xml", "site_url": "https://machinelearning.apple.com", "category": "AI", "blurb": "Apple machine learning papers"}
+{"title": "MIT News AI", "url": "https://news.mit.edu/rss/topic/artificial-intelligence2", "site_url": "https://news.mit.edu/topic/artificial-intelligence2", "category": "AI", "blurb": "MIT AI coverage"}
+{"title": "Last Week in AI", "url": "https://lastweekin.ai/feed", "site_url": "https://lastweekin.ai", "category": "AI", "blurb": "Weekly AI roundup"}
+{"title": "AWS ML Blog", "url": "https://aws.amazon.com/blogs/machine-learning/feed/", "site_url": "https://aws.amazon.com/blogs/machine-learning", "category": "AI", "blurb": "AWS machine learning"}
+{"title": "The Gradient", "url": "https://thegradient.pub/rss/", "site_url": "https://thegradient.pub", "category": "AI", "blurb": "AI research essays"}
+{"title": "Chip Huyen", "url": "https://huyenchip.com/feed", "site_url": "https://huyenchip.com", "category": "AI", "blurb": "ML systems writing"}
+{"title": "Sebastian Raschka", "url": "https://magazine.sebastianraschka.com/feed", "site_url": "https://magazine.sebastianraschka.com", "category": "AI", "blurb": "ML explanations and deep dives"}
+{"title": "arXiv cs.AI", "url": "https://rss.arxiv.org/rss/cs.AI", "site_url": "https://arxiv.org/list/cs.AI/recent", "category": "AI", "blurb": "arXiv artificial intelligence"}
+{"title": "arXiv cs.LG", "url": "https://rss.arxiv.org/rss/cs.LG", "site_url": "https://arxiv.org/list/cs.LG/recent", "category": "AI", "blurb": "arXiv machine learning"}
+{"title": "HN AI mentions", "url": "https://hnrss.org/newest?q=AI", "site_url": "https://news.ycombinator.com", "category": "AI", "blurb": "Hacker News posts mentioning AI"}
+{"title": "Netflix TechBlog", "url": "https://netflixtechblog.com/feed", "site_url": "https://netflixtechblog.com", "category": "Dev", "blurb": "Netflix engineering"}
+{"title": "Engineering at Meta", "url": "https://engineering.fb.com/feed/", "site_url": "https://engineering.fb.com", "category": "Dev", "blurb": "Meta engineering"}
+{"title": "Stripe Blog", "url": "https://stripe.com/blog/feed.rss", "site_url": "https://stripe.com/blog", "category": "Dev", "blurb": "Payments engineering and product"}
+{"title": "AWS News Blog", "url": "https://aws.amazon.com/blogs/aws/feed/", "site_url": "https://aws.amazon.com/blogs/aws", "category": "Dev", "blurb": "AWS product announcements"}
+{"title": "Kubernetes Blog", "url": "https://kubernetes.io/feed.xml", "site_url": "https://kubernetes.io/blog", "category": "Dev", "blurb": "Official Kubernetes blog"}
+{"title": "CNCF Blog", "url": "https://www.cncf.io/feed/", "site_url": "https://www.cncf.io", "category": "Dev", "blurb": "Cloud native computing"}
+{"title": "The New Stack", "url": "https://thenewstack.io/feed/", "site_url": "https://thenewstack.io", "category": "Dev", "blurb": "Cloud native journalism"}
+{"title": "Node.js Blog", "url": "https://nodejs.org/en/feed/blog.xml", "site_url": "https://nodejs.org/blog", "category": "Dev", "blurb": "Official Node.js news"}
+{"title": "Python Insider", "url": "https://blog.python.org/feeds/posts/default", "site_url": "https://blog.python.org", "category": "Dev", "blurb": "Official Python news"}
+{"title": "This Week in Rust", "url": "https://this-week-in-rust.org/atom.xml", "site_url": "https://this-week-in-rust.org", "category": "Dev", "blurb": "Rust weekly digest"}
+{"title": "InfoQ", "url": "https://feed.infoq.com/", "site_url": "https://www.infoq.com", "category": "Dev", "blurb": "Software architecture and practices"}
+{"title": "GitHub Changelog", "url": "https://github.blog/changelog/feed/", "site_url": "https://github.blog/changelog", "category": "Dev", "blurb": "GitHub product changelog"}
+{"title": "Google Developers Blog", "url": "https://developers.googleblog.com/atom.xml", "site_url": "https://developers.googleblog.com", "category": "Dev", "blurb": "Google developer news"}
+{"title": "Pragmatic Engineer", "url": "https://newsletter.pragmaticengineer.com/feed", "site_url": "https://newsletter.pragmaticengineer.com", "category": "Dev", "blurb": "Engineering career and systems"}
+{"title": "ByteByteGo", "url": "https://blog.bytebytego.com/feed", "site_url": "https://blog.bytebytego.com", "category": "Dev", "blurb": "System design explainers"}
+{"title": "freeCodeCamp News", "url": "https://www.freecodecamp.org/news/rss/", "site_url": "https://www.freecodecamp.org/news", "category": "Dev", "blurb": "Programming tutorials"}
+{"title": "JetBrains Blog", "url": "https://blog.jetbrains.com/feed/", "site_url": "https://blog.jetbrains.com", "category": "Dev", "blurb": "IDEs and language tooling"}
+{"title": "Grafana Blog", "url": "https://grafana.com/blog/index.xml", "site_url": "https://grafana.com/blog", "category": "Dev", "blurb": "Observability and Grafana"}
+{"title": "HashiCorp Blog", "url": "https://www.hashicorp.com/blog/feed.xml", "site_url": "https://www.hashicorp.com/blog", "category": "Dev", "blurb": "Terraform Vault Consul"}
+{"title": "Supabase Blog", "url": "https://supabase.com/rss.xml", "site_url": "https://supabase.com/blog", "category": "Dev", "blurb": "Open source backend platform"}
+{"title": "Vercel Blog", "url": "https://vercel.com/atom", "site_url": "https://vercel.com/blog", "category": "Dev", "blurb": "Frontend cloud platform"}
+{"title": "Slack Engineering", "url": "https://slack.engineering/feed/", "site_url": "https://slack.engineering", "category": "Dev", "blurb": "Slack engineering blog"}
+{"title": "Spotify Engineering", "url": "https://engineering.atspotify.com/feed/", "site_url": "https://engineering.atspotify.com", "category": "Dev", "blurb": "Spotify engineering"}
+{"title": "Airbnb Engineering", "url": "https://medium.com/feed/airbnb-engineering", "site_url": "https://medium.com/airbnb-engineering", "category": "Dev", "blurb": "Airbnb engineering"}
+{"title": "Etsy Code as Craft", "url": "https://www.etsy.com/codeascraft/rss", "site_url": "https://www.etsy.com/codeascraft", "category": "Dev", "blurb": "Etsy engineering"}
+{"title": "A List Apart", "url": "https://alistapart.com/main/feed", "site_url": "https://alistapart.com", "category": "Dev", "blurb": "Web design and content"}
+{"title": "Sidebar", "url": "https://sidebar.io/feed.xml", "site_url": "https://sidebar.io", "category": "Dev", "blurb": "Design link roundup"}
+{"title": "Hackaday", "url": "https://hackaday.com/blog/feed/", "site_url": "https://hackaday.com", "category": "Dev", "blurb": "Hardware hacks and makers"}
+{"title": "Adafruit Blog", "url": "https://blog.adafruit.com/feed/", "site_url": "https://blog.adafruit.com", "category": "Dev", "blurb": "Maker electronics"}
+{"title": "Raspberry Pi Blog", "url": "https://www.raspberrypi.com/news/feed/", "site_url": "https://www.raspberrypi.com/news", "category": "Dev", "blurb": "Official Raspberry Pi news"}
+{"title": "Linux Journal", "url": "https://www.linuxjournal.com/node/feed", "site_url": "https://www.linuxjournal.com", "category": "Dev", "blurb": "Linux magazine"}
+{"title": "DistroWatch", "url": "https://distrowatch.com/news/dw.xml", "site_url": "https://distrowatch.com", "category": "Dev", "blurb": "Linux distro news"}
+{"title": "It's FOSS News", "url": "https://news.itsfoss.com/feed/", "site_url": "https://news.itsfoss.com", "category": "Tech", "blurb": "Linux and open source news"}
+{"title": "CISA News", "url": "https://www.cisa.gov/news.xml", "site_url": "https://www.cisa.gov", "category": "Security", "blurb": "US cyber agency news"}
+{"title": "CISA Advisories", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml", "site_url": "https://www.cisa.gov", "category": "Security", "blurb": "Cybersecurity advisories"}
+{"title": "Schneier on Security", "url": "https://www.schneier.com/feed/", "site_url": "https://www.schneier.com", "category": "Security", "blurb": "Bruce Schneier security essays"}
+{"title": "Project Zero", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "site_url": "https://googleprojectzero.blogspot.com", "category": "Security", "blurb": "Google vulnerability research"}
+{"title": "Trail of Bits", "url": "https://blog.trailofbits.com/feed/", "site_url": "https://blog.trailofbits.com", "category": "Security", "blurb": "Security research firm blog"}
+{"title": "Security Affairs", "url": "https://securityaffairs.co/wordpress/feed", "site_url": "https://securityaffairs.com", "category": "Security", "blurb": "Cybersecurity news"}
+{"title": "The Record", "url": "https://therecord.media/feed", "site_url": "https://therecord.media", "category": "Security", "blurb": "Cybersecurity journalism"}
+{"title": "arXiv cs.CR", "url": "https://rss.arxiv.org/rss/cs.CR", "site_url": "https://arxiv.org/list/cs.CR/recent", "category": "Security", "blurb": "arXiv cryptography and security"}
+{"title": "Privacy Guides", "url": "https://www.privacyguides.org/feed", "site_url": "https://www.privacyguides.org", "category": "Security", "blurb": "Privacy tooling guides"}
+{"title": "Restore Privacy", "url": "https://restoreprivacy.com/feed/", "site_url": "https://restoreprivacy.com", "category": "Security", "blurb": "Privacy news and guides"}
+{"title": "Mullvad Blog", "url": "https://mullvad.net/blog/feed/atom", "site_url": "https://mullvad.net/blog", "category": "Security", "blurb": "VPN and privacy product blog"}
+{"title": "Proton Blog", "url": "https://proton.me/blog/feed", "site_url": "https://proton.me/blog", "category": "Security", "blurb": "Encrypted mail and VPN"}
+{"title": "Science Magazine News", "url": "https://www.science.org/rss/news_current.xml", "site_url": "https://www.science.org", "category": "Science", "blurb": "AAAS Science news"}
+{"title": "NASA Breaking News", "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss", "site_url": "https://www.nasa.gov", "category": "Science", "blurb": "NASA headlines"}
+{"title": "Ars Science", "url": "https://feeds.arstechnica.com/arstechnica/science", "site_url": "https://arstechnica.com/science", "category": "Science", "blurb": "Ars Technica science"}
+{"title": "The Conversation SciTech", "url": "https://theconversation.com/global/topics/science-technology-20/articles.atom", "site_url": "https://theconversation.com", "category": "Science", "blurb": "Academic explainers"}
+{"title": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com/rss/latest_articles/", "site_url": "https://www.smithsonianmag.com", "category": "Science", "blurb": "History science and culture"}
+{"title": "eLife", "url": "https://elifesciences.org/rss/recent.xml", "site_url": "https://elifesciences.org", "category": "Science", "blurb": "Open access life science"}
+{"title": "FlowingData", "url": "https://flowingdata.com/feed", "site_url": "https://flowingdata.com", "category": "Science", "blurb": "Data visualization stories"}
+{"title": "Guardian Space", "url": "https://www.theguardian.com/science/space/rss", "site_url": "https://www.theguardian.com/science/space", "category": "Science", "blurb": "Guardian space section"}
+{"title": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "site_url": "https://www.bbc.com/news/world", "category": "World", "blurb": "BBC world desk"}
+{"title": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml", "site_url": "https://www.npr.org/sections/world", "category": "World", "blurb": "NPR world desk"}
+{"title": "Politico Europe", "url": "https://www.politico.eu/feed/", "site_url": "https://www.politico.eu", "category": "World", "blurb": "European politics"}
+{"title": "Euronews", "url": "https://www.euronews.com/rss", "site_url": "https://www.euronews.com", "category": "World", "blurb": "European news"}
+{"title": "The Intercept", "url": "https://theintercept.com/feed/?rss", "site_url": "https://theintercept.com", "category": "World", "blurb": "Investigative journalism"}
+{"title": "9to5Mac", "url": "https://9to5mac.com/feed/", "site_url": "https://9to5mac.com", "category": "Tech", "blurb": "Apple Mac and iOS news"}
+{"title": "AppleInsider", "url": "https://appleinsider.com/rss/news/", "site_url": "https://appleinsider.com", "category": "Tech", "blurb": "Apple news and rumors"}
+{"title": "Apple Newsroom", "url": "https://www.apple.com/newsroom/rss-feed.rss", "site_url": "https://www.apple.com/newsroom", "category": "Tech", "blurb": "Official Apple news"}
+{"title": "Cult of Mac", "url": "https://www.cultofmac.com/feed", "site_url": "https://www.cultofmac.com", "category": "Tech", "blurb": "Apple culture and tips"}
+{"title": "Stratechery", "url": "https://stratechery.com/feed/", "site_url": "https://stratechery.com", "category": "Tech", "blurb": "Tech strategy analysis"}
+{"title": "Benedict Evans", "url": "https://www.ben-evans.com/benedictevans?format=rss", "site_url": "https://www.ben-evans.com", "category": "Tech", "blurb": "Tech industry notes"}
+{"title": "SemiAnalysis", "url": "https://www.semianalysis.com/feed", "site_url": "https://www.semianalysis.com", "category": "Tech", "blurb": "Semiconductor analysis"}
+{"title": "Electrek", "url": "https://electrek.co/feed/", "site_url": "https://electrek.co", "category": "Tech", "blurb": "EVs and clean energy tech"}
+{"title": "CleanTechnica", "url": "https://cleantechnica.com/feed/", "site_url": "https://cleantechnica.com", "category": "Tech", "blurb": "Clean energy news"}
+{"title": "Framework Blog", "url": "https://frame.work/blog.rss", "site_url": "https://frame.work/blog", "category": "Tech", "blurb": "Repairable laptop company"}
+{"title": "System76 Blog", "url": "https://blog.system76.com/rss.xml", "site_url": "https://blog.system76.com", "category": "Tech", "blurb": "Linux PC company"}
+{"title": "Defector", "url": "https://defector.com/feed", "site_url": "https://defector.com", "category": "Culture", "blurb": "Worker-owned sports and culture"}
+{"title": "Pitchfork", "url": "https://pitchfork.com/feed/feed-news/rss", "site_url": "https://pitchfork.com", "category": "Culture", "blurb": "Music criticism"}
+{"title": "Polygon", "url": "https://www.polygon.com/rss/index.xml", "site_url": "https://www.polygon.com", "category": "Culture", "blurb": "Games and entertainment"}
+{"title": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/feed", "site_url": "https://www.rockpapershotgun.com", "category": "Culture", "blurb": "PC gaming journalism"}
+{"title": "Eurogamer", "url": "https://www.eurogamer.net/?format=rss", "site_url": "https://www.eurogamer.net", "category": "Culture", "blurb": "Games journalism"}
+{"title": "CJR", "url": "https://www.cjr.org/feed", "site_url": "https://www.cjr.org", "category": "Culture", "blurb": "Columbia Journalism Review"}
+{"title": "Nieman Storyboard", "url": "https://niemanstoryboard.org/feed/", "site_url": "https://niemanstoryboard.org", "category": "Culture", "blurb": "Narrative journalism craft"}
+{"title": "Public Domain Review", "url": "https://publicdomainreview.org/rss.xml", "site_url": "https://publicdomainreview.org", "category": "Culture", "blurb": "Curios from the public domain"}
+{"title": "Lapham's Quarterly", "url": "https://www.laphamsquarterly.org/rss.xml", "site_url": "https://www.laphamsquarterly.org", "category": "Culture", "blurb": "Ideas and history"}
+{"title": "JSTOR Daily", "url": "https://daily.jstor.org/feed/", "site_url": "https://daily.jstor.org", "category": "Culture", "blurb": "Scholarly stories for everyone"}
+{"title": "Tedium", "url": "https://feed.tedium.co/", "site_url": "https://tedium.co", "category": "Culture", "blurb": "Overlooked cultural history"}
+{"title": "Damn Interesting", "url": "https://www.damninteresting.com/feed/", "site_url": "https://www.damninteresting.com", "category": "Culture", "blurb": "Strange true stories"}
+{"title": "Wait But Why", "url": "https://waitbutwhy.com/feed", "site_url": "https://waitbutwhy.com", "category": "Culture", "blurb": "Longform explainers"}
+{"title": "Kagi Small Web", "url": "https://kagi.com/api/v1/smallweb/feed", "site_url": "https://kagi.com/smallweb", "category": "Blogs", "blurb": "Rolling mix of personal sites from Kagi Small Web"}
+{"title": "Risky Business", "url": "https://risky.biz/feeds/risky-business/", "site_url": "https://risky.biz", "category": "Security", "blurb": "Aussie infosec news podcast"}
+{"title": "Risky Business News", "url": "https://risky.biz/feeds/risky-business-news/", "site_url": "https://risky.biz", "category": "Security", "blurb": "Daily infosec news brief"}
+{"title": "CyberScoop", "url": "https://cyberscoop.com/feed/", "site_url": "https://cyberscoop.com", "category": "Security", "blurb": "Cyber policy and threats"}
+{"title": "SecurityWeek", "url": "https://www.securityweek.com/feed/", "site_url": "https://www.securityweek.com", "category": "Security", "blurb": "Enterprise security news"}
+{"title": "Microsoft Security Blog", "url": "https://www.microsoft.com/en-us/security/blog/feed/", "site_url": "https://www.microsoft.com/security", "category": "Security", "blurb": "Microsoft threat intel"}
+{"title": "SANS Internet Storm Center", "url": "https://isc.sans.edu/rssfeed_full.xml", "site_url": "https://isc.sans.edu", "category": "Security", "blurb": "Daily internet threat diary"}
+{"title": "DataBreaches.net", "url": "https://www.databreaches.net/feed/", "site_url": "https://www.databreaches.net", "category": "Security", "blurb": "Breach and privacy incidents"}
+{"title": "Troy Hunt", "url": "https://www.troyhunt.com/rss/", "site_url": "https://www.troyhunt.com", "category": "Security", "blurb": "Have I Been Pwned author"}
+{"title": "Graham Cluley", "url": "https://grahamcluley.com/feed/", "site_url": "https://grahamcluley.com", "category": "Security", "blurb": "Security commentary"}
+{"title": "Filippo Valsorda", "url": "https://words.filippo.io/rss/", "site_url": "https://words.filippo.io", "category": "Security", "blurb": "Crypto and Go security"}
+{"title": "Latacora", "url": "https://latacora.micro.blog/feed.xml", "site_url": "https://latacora.micro.blog", "category": "Security", "blurb": "Security consulting essays"}
+{"title": "Errata Security", "url": "https://blog.erratasec.com/feeds/posts/default", "site_url": "https://blog.erratasec.com", "category": "Security", "blurb": "Robert Graham security notes"}
+{"title": "Defense One", "url": "https://www.defenseone.com/rss/all/", "site_url": "https://www.defenseone.com", "category": "Military", "blurb": "Defense tech and policy"}
+{"title": "Breaking Defense", "url": "https://breakingdefense.com/feed/", "site_url": "https://breakingdefense.com", "category": "Military", "blurb": "Defense industry news"}
+{"title": "War on the Rocks", "url": "https://warontherocks.com/feed/", "site_url": "https://warontherocks.com", "category": "Military", "blurb": "Strategy and national security essays"}
+{"title": "The War Zone", "url": "https://www.twz.com/feed", "site_url": "https://www.twz.com", "category": "Military", "blurb": "Military aviation and tech"}
+{"title": "Defense News", "url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml", "site_url": "https://www.defensenews.com", "category": "Military", "blurb": "Global defense coverage"}
+{"title": "Task & Purpose", "url": "https://taskandpurpose.com/feed/", "site_url": "https://taskandpurpose.com", "category": "Military", "blurb": "Military culture and news"}
+{"title": "USNI News", "url": "https://news.usni.org/feed", "site_url": "https://news.usni.org", "category": "Military", "blurb": "Naval Institute news"}
+{"title": "Naval News", "url": "https://www.navalnews.com/feed/", "site_url": "https://www.navalnews.com", "category": "Military", "blurb": "Naval technology and ships"}
+{"title": "Army Times", "url": "https://www.armytimes.com/arc/outboundfeeds/rss/?outputType=xml", "site_url": "https://www.armytimes.com", "category": "Military", "blurb": "US Army news"}
+{"title": "Air Force Times", "url": "https://www.airforcetimes.com/arc/outboundfeeds/rss/?outputType=xml", "site_url": "https://www.airforcetimes.com", "category": "Military", "blurb": "US Air Force news"}
+{"title": "C4ISRNET", "url": "https://www.c4isrnet.com/arc/outboundfeeds/rss/?outputType=xml", "site_url": "https://www.c4isrnet.com", "category": "Military", "blurb": "C4ISR and cyber defense"}
+{"title": "DoD News", "url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=20&ContentType=1&Site=945", "site_url": "https://www.defense.gov", "category": "Military", "blurb": "Official US Defense news"}
+{"title": "Foreign Policy", "url": "https://foreignpolicy.com/feed/", "site_url": "https://foreignpolicy.com", "category": "Military", "blurb": "Geopolitics and strategy"}
+{"title": "Foreign Affairs", "url": "https://www.foreignaffairs.com/rss.xml", "site_url": "https://www.foreignaffairs.com", "category": "Military", "blurb": "International relations"}
+{"title": "NASA Image of the Day", "url": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss", "site_url": "https://www.nasa.gov", "category": "Space", "blurb": "Daily NASA imagery"}
+{"title": "Space.com", "url": "https://www.space.com/feeds/all", "site_url": "https://www.space.com", "category": "Space", "blurb": "Spaceflight and astronomy news"}
+{"title": "SpaceNews", "url": "https://spacenews.com/feed/", "site_url": "https://spacenews.com", "category": "Space", "blurb": "Commercial and civil space"}
+{"title": "Universe Today", "url": "https://www.universetoday.com/feed/", "site_url": "https://www.universetoday.com", "category": "Space", "blurb": "Space and astronomy explainers"}
+{"title": "Planetary Society", "url": "https://www.planetary.org/rss/articles", "site_url": "https://www.planetary.org", "category": "Space", "blurb": "Planetary exploration advocacy"}
+{"title": "Spaceflight Now", "url": "https://spaceflightnow.com/feed/", "site_url": "https://spaceflightnow.com", "category": "Space", "blurb": "Launch and mission coverage"}
+{"title": "NASASpaceflight", "url": "https://www.nasaspaceflight.com/feed/", "site_url": "https://www.nasaspaceflight.com", "category": "Space", "blurb": "Detailed launch coverage"}
+{"title": "Sky & Telescope", "url": "https://skyandtelescope.org/astronomy-news/feed/", "site_url": "https://skyandtelescope.org", "category": "Space", "blurb": "Amateur and pro astronomy"}
+{"title": "Phys.org Space", "url": "https://phys.org/rss-feed/space-news/", "site_url": "https://phys.org", "category": "Space", "blurb": "Space research headlines"}
+{"title": "ESA Space Science", "url": "https://www.esa.int/rssfeed/science", "site_url": "https://www.esa.int", "category": "Space", "blurb": "ESA science missions"}
+{"title": "Astrobiology", "url": "https://astrobiology.com/feed", "site_url": "https://astrobiology.com", "category": "Space", "blurb": "Astrobiology news"}
+{"title": "STAT News", "url": "https://www.statnews.com/feed/", "site_url": "https://www.statnews.com", "category": "Science", "blurb": "Medicine and biotech"}
+{"title": "ScienceNews", "url": "https://www.sciencenews.org/feed", "site_url": "https://www.sciencenews.org", "category": "Science", "blurb": "Society for Science"}
+{"title": "PLOS Blog", "url": "https://blogs.plos.org/everyone/feed/", "site_url": "https://blogs.plos.org", "category": "Science", "blurb": "Open science publishing"}
+{"title": "Dan Luu", "url": "https://danluu.com/atom.xml", "site_url": "https://danluu.com", "category": "Blogs", "blurb": "Systems and performance essays"}
+{"title": "Aphyr", "url": "https://aphyr.com/posts.atom", "site_url": "https://aphyr.com", "category": "Blogs", "blurb": "Jepsen and distributed systems"}
+{"title": "Brandur", "url": "https://brandur.org/articles.atom", "site_url": "https://brandur.org", "category": "Blogs", "blurb": "Postgres and API craft"}
+{"title": "Steve Yegge", "url": "https://steve-yegge.blogspot.com/feeds/posts/default", "site_url": "https://steve-yegge.blogspot.com", "category": "Blogs", "blurb": "Long-form eng essays"}
+{"title": "Chris's Wiki Blog", "url": "https://utcc.utoronto.ca/~cks/space/blog/?atom", "site_url": "https://utcc.utoronto.ca/~cks/space/blog/", "category": "Blogs", "blurb": "Unix systems writing"}
+{"title": "Armin Ronacher", "url": "https://lucumr.pocoo.org/feed.atom", "site_url": "https://lucumr.pocoo.org", "category": "Blogs", "blurb": "Flask author"}
+{"title": "Eli Bendersky", "url": "https://eli.thegreenplace.net/feeds/all.atom.xml", "site_url": "https://eli.thegreenplace.net", "category": "Blogs", "blurb": "Compilers and systems"}
+{"title": "Null Program", "url": "https://nullprogram.com/feed/", "site_url": "https://nullprogram.com", "category": "Blogs", "blurb": "Chris Wellons systems"}
+{"title": "Joel on Software", "url": "https://www.joelonsoftware.com/feed/", "site_url": "https://www.joelonsoftware.com", "category": "Blogs", "blurb": "Classic software essays"}
+{"title": "Coding Horror", "url": "https://blog.codinghorror.com/rss/", "site_url": "https://blog.codinghorror.com", "category": "Blogs", "blurb": "Jeff Atwood"}
+{"title": "Tailscale Blog", "url": "https://tailscale.com/blog/index.xml", "site_url": "https://tailscale.com", "category": "Blogs", "blurb": "Mesh VPN engineering"}
+{"title": "Oxide Blog", "url": "https://oxide.computer/blog/feed", "site_url": "https://oxide.computer", "category": "Blogs", "blurb": "Hardware systems company"}
+{"title": "Fly.io Blog", "url": "https://fly.io/blog/feed.xml", "site_url": "https://fly.io", "category": "Blogs", "blurb": "Edge compute engineering"}
+{"title": "SourceHut Blog", "url": "https://sourcehut.org/blog/index.xml", "site_url": "https://sourcehut.org", "category": "Blogs", "blurb": "FOSS forge"}
+{"title": "Zig News", "url": "https://ziglang.org/news/index.xml", "site_url": "https://ziglang.org", "category": "Dev", "blurb": "Zig language news"}
+{"title": "WebKit Blog", "url": "https://webkit.org/feed/", "site_url": "https://webkit.org", "category": "Dev", "blurb": "WebKit engine"}
+{"title": "Mozilla Hacks", "url": "https://hacks.mozilla.org/feed/", "site_url": "https://hacks.mozilla.org", "category": "Dev", "blurb": "Mozilla engineering"}
+{"title": "Chrome Developers", "url": "https://developer.chrome.com/static/blog/feed.xml", "site_url": "https://developer.chrome.com", "category": "Dev", "blurb": "Chrome platform"}
+{"title": "Astral Codex Ten", "url": "https://www.astralcodexten.com/feed", "site_url": "https://www.astralcodexten.com", "category": "Blogs", "blurb": "Scott Alexander essays"}
+{"title": "Marginal Revolution", "url": "https://marginalrevolution.com/feed", "site_url": "https://marginalrevolution.com", "category": "Blogs", "blurb": "Economics blog"}
+{"title": "LessWrong", "url": "https://www.lesswrong.com/feed.xml", "site_url": "https://www.lesswrong.com", "category": "Blogs", "blurb": "Rationality community"}
+{"title": "00f.net", "url": "https://00f.net/atom.xml", "site_url": "https://00f.net", "category": "Blogs", "blurb": "Systems and programming notes"}
+{"title": "Aram Zucker-Scharff", "url": "https://aramzs.xyz/writing/feed.xml", "site_url": "https://aramzs.xyz", "category": "Blogs", "blurb": "Web and journalism tech"}
+{"title": "Baptiste Wicht", "url": "https://baptiste-wicht.com/rss.xml", "site_url": "https://baptiste-wicht.com", "category": "Blogs", "blurb": "C++ and compilers"}
+{"title": "Complete.org Changelog", "url": "https://changelog.complete.org/feed", "site_url": "https://changelog.complete.org", "category": "Blogs", "blurb": "Debian and FOSS notes"}
+{"title": "Code Yarns", "url": "https://codeyarns.com/tech/rss.xml", "site_url": "https://codeyarns.com", "category": "Blogs", "blurb": "Programming how-tos"}
+{"title": "Ian Y.E. Pan", "url": "https://ianyepan.github.io/feed.xml", "site_url": "https://ianyepan.github.io", "category": "Blogs", "blurb": "Graphics and systems"}
+{"title": "Josh Duff", "url": "https://joshduff.com/feed.rss", "site_url": "https://joshduff.com", "category": "Blogs", "blurb": "Web engineering"}
+{"title": "Keith Rozario", "url": "https://keithrozario.com/index.xml", "site_url": "https://keithrozario.com", "category": "Blogs", "blurb": "AWS Lambda and serverless"}
+{"title": "Lochie", "url": "https://lochie.dev/index.xml", "site_url": "https://lochie.dev", "category": "Blogs", "blurb": "Indie web development"}
+{"title": "Martin Bonnin", "url": "https://mbonnin.net/rss.xml", "site_url": "https://mbonnin.net", "category": "Blogs", "blurb": "Kotlin and GraphQL"}
+{"title": "Minireference", "url": "https://minireference.com/blog/feed/", "site_url": "https://minireference.com", "category": "Blogs", "blurb": "Math and physics textbooks"}
+{"title": "Martin Zikmund", "url": "https://mzikmund.dev/rss/", "site_url": "https://mzikmund.dev", "category": "Blogs", "blurb": "Windows and .NET"}
+{"title": "pbx.sh", "url": "https://pbx.sh/feed.xml", "site_url": "https://pbx.sh", "category": "Blogs", "blurb": "Systems notes"}
+{"title": "Robert Heaton", "url": "https://robertheaton.com/feed.xml", "site_url": "https://robertheaton.com", "category": "Blogs", "blurb": "Security and programming essays"}
+{"title": "S. Falken", "url": "https://sfalken.tech/index.xml", "site_url": "https://sfalken.tech", "category": "Blogs", "blurb": "Tech writing"}
+{"title": "Tony Zorman", "url": "https://tony-zorman.com/atom.xml", "site_url": "https://tony-zorman.com", "category": "Blogs", "blurb": "Haskell and math"}
+{"title": "Carmen Bianca", "url": "https://www.carmenbianca.eu/en/tags/free-software/index.xml", "site_url": "https://www.carmenbianca.eu", "category": "Blogs", "blurb": "Free software notes"}
+{"title": "Hugo", "url": "https://www.hugo.im/rss.xml", "site_url": "https://www.hugo.im", "category": "Blogs", "blurb": "Personal engineering blog"}
+{"title": "Kris Carta", "url": "https://www.kriscarta.com/feed", "site_url": "https://www.kriscarta.com", "category": "Blogs", "blurb": "Product and startups"}
+{"title": "Nate Berkopec", "url": "https://www.nateberkopec.com/feed.xml", "site_url": "https://www.nateberkopec.com", "category": "Blogs", "blurb": "Ruby performance and Rails"}
