@@ -10,14 +10,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 	"github.com/Quad4-Software/rss-discovery/internal/auth"
 	"github.com/Quad4-Software/rss-discovery/internal/config"
 	"github.com/Quad4-Software/rss-discovery/internal/fetch"
 	"github.com/Quad4-Software/rss-discovery/internal/observ"
 	"github.com/Quad4-Software/rss-discovery/internal/security"
 	"github.com/Quad4-Software/rss-discovery/internal/store"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 // Server is the Echo HTTP API.
@@ -76,6 +76,7 @@ func (s *Server) routes() {
 	s.echo.GET("/openapi.json", s.openapiJSON)
 	s.echo.GET("/docs", s.docsHTML)
 	s.echo.GET("/docs/", s.docsHTML)
+	s.echo.GET("/docs/assets/*", s.docsAsset)
 	s.echo.GET("/v1/stats", s.stats)
 	s.echo.GET("/v1/feeds", s.listFeeds)
 	s.echo.GET("/v1/feeds/:id", s.getFeed)

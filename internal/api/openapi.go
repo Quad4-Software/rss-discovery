@@ -1,14 +1,21 @@
 package api
 
 import (
-	_ "embed"
+	"embed"
 	"net/http"
+	"regexp"
+	"strings"
 
 	"github.com/labstack/echo/v4"
 )
 
 //go:embed openapi.json
 var openAPISpec []byte
+
+//go:embed docs
+var docsAssets embed.FS
+
+var docsAssetName = regexp.MustCompile(`^[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*$`)
 
 func (s *Server) openapiJSON(c echo.Context) error {
 	return c.Blob(http.StatusOK, "application/json; charset=utf-8", openAPISpec)
@@ -18,56 +25,54 @@ func (s *Server) docsHTML(c echo.Context) error {
 	return c.HTMLBlob(http.StatusOK, docsHTMLPage)
 }
 
-// Minimal self-hosted docs (no CDN). Full machine-readable contract is /openapi.json.
+// docsAsset serves the vendored Scalar bundle and fonts from the embedded
+// docs directory. Paths are whitelisted against the embedded fs so nothing
+// outside it can be reached.
+func (s *Server) docsAsset(c echo.Context) error {
+	name := c.Param("*")
+	if !docsAssetName.MatchString(name) || strings.Contains(name, "..") {
+		return echo.NewHTTPError(http.StatusNotFound, "not found")
+	}
+	data, err := docsAssets.ReadFile("docs/" + name)
+	if err != nil {
+		return echo.NewHTTPError(http.StatusNotFound, "not found")
+	}
+	ctype := "application/octet-stream"
+	switch {
+	case strings.HasSuffix(name, ".js"):
+		ctype = "text/javascript; charset=utf-8"
+	case strings.HasSuffix(name, ".woff2"):
+		ctype = "font/woff2"
+	}
+	// assets are version pinned at build time so they can cache forever
+	c.Response().Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+	return c.Blob(http.StatusOK, ctype, data)
+}
+
+// Scalar standalone build, fully self-hosted under /docs/assets. See
+// docs/VENDORED.md for version and provenance.
 var docsHTMLPage = []byte(`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="color-scheme" content="dark"/>
 <title>RSS Discovery API</title>
-<style>
-:root { --bg:#0f1419; --fg:#e7ecf1; --muted:#9aa7b5; --accent:#5b9fd4; --line:#243040; }
-html,body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 ui-sans-serif, system-ui, sans-serif; }
-main { max-width: 52rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
-h1 { font-size: 1.75rem; letter-spacing: -0.02em; margin: 0 0 .5rem; }
-p { color: var(--muted); margin: 0 0 1.25rem; }
-a { color: var(--accent); }
-code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-pre { background: #16202a; border: 1px solid var(--line); padding: 1rem; overflow: auto; border-radius: 6px; }
-ul { padding-left: 1.2rem; color: var(--muted); }
-li { margin: .35rem 0; }
-.badge { display:inline-block; font-size:.75rem; border:1px solid var(--line); padding:.15rem .45rem; border-radius:4px; color:var(--fg); margin-right:.35rem; }
-</style>
+<style>html,body{margin:0;background:#0f1419}</style>
 </head>
 <body>
-<main>
-  <h1>RSS Discovery API</h1>
-  <p>Public feed catalog, search, discovery, and full-text cache. Authenticate with <code>Authorization: Bearer rd_&lt;level&gt;_&lt;secret&gt;</code> or <code>X-API-Key</code>. When <code>auth.required=false</code>, anonymous clients may call readonly GETs under a strict public rate limit while token clients keep higher limits and reserved capacity.</p>
-  <p><a href="/openapi.json">OpenAPI 3.1 JSON</a> &middot; Levels: readonly, standard, priority, admin</p>
-  <h2>Core</h2>
-  <ul>
-    <li><span class="badge">GET</span> <code>/healthz</code> <code>/livez</code> <code>/readyz</code></li>
-    <li><span class="badge">GET</span> <code>/v1/stats</code> (ETag / CDN cache)</li>
-    <li><span class="badge">GET</span> <code>/v1/feeds</code> list &middot; <span class="badge">POST</span> add</li>
-    <li><span class="badge">GET</span> <code>/v1/feeds/{id}</code> &middot; status &middot; health &middot; refresh</li>
-    <li><span class="badge">GET</span> <code>/v1/search/feeds|entries|content?q=</code></li>
-    <li><span class="badge">GET</span> <code>/v1/similar/feeds/{id}?method=jaccard|embedding</code></li>
-    <li><span class="badge">GET/POST</span> <code>/v1/opml</code> &middot; <span class="badge">POST</span> <code>/v1/discover/bulk</code> &middot; <code>/v1/jobs</code></li>
-    <li><span class="badge">GET</span> <code>/v1/status/freshness</code> &middot; <code>/v1/health/feeds</code></li>
-    <li><span class="badge">POST</span> <code>/oauth/token</code> (client_credentials)</li>
-  </ul>
-  <h2>Admin</h2>
-  <ul>
-    <li><span class="badge">POST</span> <code>/v1/purge</code></li>
-    <li><span class="badge">GET/POST</span> <code>/v1/admin/maintenance</code></li>
-    <li><span class="badge">GET/POST/DELETE</span> <code>/v1/admin/tokens</code> &middot; oauth clients</li>
-    <li><span class="badge">GET/POST/DELETE</span> <code>/v1/webhooks</code> &middot; <code>/v1/websub</code></li>
-    <li><span class="badge">GET</span> <code>/v1/admin/access-logs</code></li>
-  </ul>
-  <h2>Limits</h2>
-  <p>Rate limits apply per IP for anonymous traffic and per token for authenticated clients. Under load, public requests are shed first so authed clients keep reserved concurrency. Readonly GETs advertise <code>Cache-Control: public, max-age, stale-while-revalidate</code> and weak ETags. WebSub callbacks and OAuth token endpoint are public.</p>
-  <pre>curl -sH "Authorization: Bearer $TOKEN" -H "User-Agent: MyApp/1.0" \
-  "https://example/v1/search/feeds?q=golang"</pre>
-</main>
+<div id="app"></div>
+<noscript><p style="color:#e7ecf1;font-family:sans-serif;padding:2rem">
+API docs need JavaScript. The raw spec is at
+<a style="color:#5b9fd4" href="/openapi.json">/openapi.json</a>.</p></noscript>
+<script src="/docs/assets/scalar-1.68.0.js"></script>
+<script>
+Scalar.createApiReference('#app', {
+  url: '/openapi.json',
+  theme: 'deepSpace',
+  forceDarkModeState: 'dark',
+  hideDarkModeToggle: true,
+})
+</script>
 </body>
 </html>`)

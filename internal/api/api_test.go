@@ -304,6 +304,27 @@ func TestOpenAPIAndDocs(t *testing.T) {
 	if w.Code != 200 {
 		t.Fatalf("docs %d", w.Code)
 	}
+	if !bytes.Contains(w.Body.Bytes(), []byte("scalar")) {
+		t.Fatal("docs page does not mount scalar")
+	}
+	w = doReq(t, srv, "GET", "/docs/assets/scalar-1.68.0.js", "", "Quad4Test/1.0", nil)
+	if w.Code != 200 {
+		t.Fatalf("docs asset %d", w.Code)
+	}
+	if ct := w.Header().Get("Content-Type"); !strings.Contains(ct, "javascript") {
+		t.Fatalf("docs asset content type %q", ct)
+	}
+	if cc := w.Header().Get("Cache-Control"); !strings.Contains(cc, "immutable") {
+		t.Fatalf("docs asset cache control %q", cc)
+	}
+	w = doReq(t, srv, "GET", "/docs/assets/fonts/inter-latin.woff2", "", "Quad4Test/1.0", nil)
+	if w.Code != 200 {
+		t.Fatalf("docs font %d", w.Code)
+	}
+	w = doReq(t, srv, "GET", "/docs/assets/../openapi.json", "", "Quad4Test/1.0", nil)
+	if w.Code == 200 {
+		t.Fatal("path traversal served")
+	}
 }
 
 func TestFloodAmbiguousFraming(t *testing.T) {

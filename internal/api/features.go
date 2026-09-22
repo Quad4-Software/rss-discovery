@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/labstack/echo/v4"
 	"github.com/Quad4-Software/rss-discovery/internal/auth"
 	"github.com/Quad4-Software/rss-discovery/internal/opml"
 	"github.com/Quad4-Software/rss-discovery/internal/security"
 	"github.com/Quad4-Software/rss-discovery/internal/store"
 	"github.com/Quad4-Software/rss-discovery/internal/websub"
+	"github.com/labstack/echo/v4"
 )
 
 func (s *Server) registerFeatureRoutes() {

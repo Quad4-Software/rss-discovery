@@ -8,9 +8,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/labstack/echo/v4"
 	"github.com/Quad4-Software/rss-discovery/internal/auth"
 	"github.com/Quad4-Software/rss-discovery/internal/security"
+	"github.com/labstack/echo/v4"
 )
 
 // FloodGuard rejects modern application-layer abuse cheaply before handlers run.
@@ -185,7 +185,8 @@ func (s *Server) mwCacheHeaders(next echo.HandlerFunc) echo.HandlerFunc {
 				c.Response().Header().Set("Cache-Control",
 					"public, max-age="+strconv.Itoa(maxAge)+", stale-while-revalidate="+strconv.Itoa(swr))
 				c.Response().Header().Set("Vary", "Authorization, Accept-Encoding")
-			} else if path != "/openapi.json" && path != "/docs" && path != "/docs/" {
+			} else if path != "/openapi.json" && path != "/docs" && path != "/docs/" &&
+				!strings.HasPrefix(path, "/docs/assets/") {
 				c.Response().Header().Set("Cache-Control", "private, no-store")
 			}
 		} else {

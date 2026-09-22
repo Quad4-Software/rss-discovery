@@ -8,18 +8,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/labstack/echo/v4"
 	"github.com/Quad4-Software/rss-discovery/internal/auth"
 	"github.com/Quad4-Software/rss-discovery/internal/security"
 	"github.com/Quad4-Software/rss-discovery/internal/store"
+	"github.com/labstack/echo/v4"
 	"golang.org/x/time/rate"
 )
 
 type ctxKey string
 
 const (
-	ctxToken  = "api_token"
-	ctxLevel  = "api_level"
+	ctxToken = "api_token"
+	ctxLevel = "api_level"
 )
 
 type limiterEntry struct {
@@ -333,7 +333,8 @@ func isPublicPath(path string) bool {
 		"/oauth/token", "/v1/websub/callback":
 		return true
 	default:
-		return false
+		// vendored scalar bundle and fonts backing /docs
+		return strings.HasPrefix(path, "/docs/assets/")
 	}
 }
 
