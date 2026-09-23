@@ -49,8 +49,8 @@ func TestClientIP(t *testing.T) {
 		t.Fatal(security.ClientIP(r, false))
 	}
 	r.Header.Set("X-Forwarded-For", "9.9.9.9, 8.8.8.8")
-	if security.ClientIP(r, true) != "9.9.9.9" {
-		t.Fatal("xff")
+	if security.ClientIP(r, true) != "8.8.8.8" {
+		t.Fatal("xff: rightmost entry is the proxy-appended peer, leftmost is spoofable")
 	}
 	if security.ClientIP(r, false) != "1.2.3.4" {
 		t.Fatal("untrusted xff ignored")
