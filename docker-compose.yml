@@ -36,6 +36,12 @@ services:
       - ./deploy/config.docker.toml:/config/config.toml:ro,Z
     tmpfs:
       - /tmp:size=64m,mode=1777
+    healthcheck:
+      test: ["CMD", "/app/rss-discovery", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
     restart: unless-stopped
 
 volumes:

@@ -29,6 +29,8 @@ func main() {
 			os.Exit(runToken(os.Args[2:]))
 		case "serve":
 			os.Exit(runServe(os.Args[2:]))
+		case "healthcheck":
+			os.Exit(runHealthcheck(os.Args[2:]))
 		case "help", "-h", "--help":
 			printHelp()
 			return
@@ -42,6 +44,7 @@ func printHelp() {
 
 Usage:
   rss-discovery serve [flags]
+  rss-discovery healthcheck
   rss-discovery token generate --name NAME --level LEVEL [--ttl 720h]
   rss-discovery token revoke ID
   rss-discovery token list [--revoked]
@@ -124,7 +127,7 @@ func runServe(args []string) int {
 		return 1
 	}
 
-	if err := sandbox.Apply(cfg.DataDir, cfg.DBPath, cfg.SeedDir, cfg.Server.Addr, cfg.Landlock); err != nil {
+	if err := sandbox.Apply(cfg.DataDir, cfg.DBPath, cfg.SeedDir, []string{cfg.Server.Addr, cfg.Metrics.Addr}, cfg.Landlock); err != nil {
 		slog.Error("landlock", "err", err)
 		return 1
 	}

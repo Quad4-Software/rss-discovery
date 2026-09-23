@@ -14,7 +14,8 @@ import (
 
 // Apply restricts filesystem and network access using Landlock V10 BestEffort.
 // Call after opening DuckDB and creating data dirs, before serving traffic.
-func Apply(dataDir, dbPath, seedDir, listenAddr string, enable bool) error {
+// listenAddrs is every address the process will bind (server, metrics).
+func Apply(dataDir, dbPath, seedDir string, listenAddrs []string, enable bool) error {
 	if !enable {
 		slog.Info("landlock disabled")
 		return nil
@@ -38,27 +39,41 @@ func Apply(dataDir, dbPath, seedDir, listenAddr string, enable bool) error {
 		}
 	}
 
-	port, err := listenPort(listenAddr)
-	if err != nil {
-		return err
+	ports := map[uint16]struct{}{}
+	for _, addr := range listenAddrs {
+		if addr == "" {
+			continue
+		}
+		p, err := listenPort(addr)
+		if err != nil {
+			return err
+		}
+		ports[p] = struct{}{}
 	}
 
 	ro := []string{"/usr", "/lib", "/lib64", "/bin", "/sbin", "/etc/ssl", "/etc/ca-certificates", "/etc/resolv.conf", "/etc/hosts", "/etc/nsswitch.conf", "/etc/passwd"}
-	ro = existingOnly(ro)
-	if len(ro) == 0 {
-		ro = []string{"/usr"}
+	roDirs, roFiles := splitDirsFiles(existingOnly(ro))
+	if len(roDirs) == 0 && len(roFiles) == 0 {
+		roDirs = []string{"/usr"}
 	}
 
 	rules := []landlock.Rule{
-		landlock.RODirs(ro...),
 		landlock.RWDirs(absData, absDB),
 		landlock.RODirs(absSeed),
-		landlock.BindTCP(port),
 		landlock.ConnectTCP(443),
 		landlock.ConnectTCP(80),
 		landlock.ConnectTCP(53),
 		landlock.BindUDP(0),
 		landlock.ConnectSendUDP(53),
+	}
+	for p := range ports {
+		rules = append(rules, landlock.BindTCP(p))
+	}
+	if len(roDirs) > 0 {
+		rules = append(rules, landlock.RODirs(roDirs...))
+	}
+	if len(roFiles) > 0 {
+		rules = append(rules, landlock.ROFiles(roFiles...))
 	}
 
 	tmp := os.TempDir()
@@ -70,7 +85,7 @@ func Apply(dataDir, dbPath, seedDir, listenAddr string, enable bool) error {
 	if err != nil {
 		return fmt.Errorf("landlock: %w", err)
 	}
-	slog.Info("landlock applied", "abi", "V10", "data", absData, "listen_port", port)
+	slog.Info("landlock applied", "abi", "V10", "data", absData, "listen_ports", len(ports))
 	return nil
 }
 
@@ -99,4 +114,34 @@ func existingOnly(paths []string) []string {
 		}
 	}
 	return out
+}
+
+// splitDirsFiles partitions paths into directories and regular files.
+// landlock_add_rule rejects directory access rights on non-directories.
+// Symlinks are resolved and the target classified too: Landlock checks
+// the resolved inode, so ruling only the link would still deny access.
+func splitDirsFiles(paths []string) (dirs, files []string) {
+	seen := map[string]bool{}
+	add := func(p string) {
+		if seen[p] {
+			return
+		}
+		seen[p] = true
+		info, err := os.Stat(p)
+		if err != nil {
+			return
+		}
+		if info.IsDir() {
+			dirs = append(dirs, p)
+		} else {
+			files = append(files, p)
+		}
+	}
+	for _, p := range paths {
+		add(p)
+		if real, err := filepath.EvalSymlinks(p); err == nil {
+			add(real)
+		}
+	}
+	return dirs, files
 }
