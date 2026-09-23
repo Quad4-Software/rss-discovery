@@ -22,7 +22,7 @@ services:
         cat > /config/config.toml <<'TOML'
         data_dir = "/data"
         db_path = "/data/rss.duckdb"
-        seed_dir = "/data/seeds"
+        seed_dir = "/app/seeds"
         landlock = true
 
         [server]
@@ -163,7 +163,7 @@ services:
     image: ${RSS_DISCOVERY_IMAGE:-ghcr.io/quad4-software/rss-discovery:latest}
     restart: unless-stopped
     # Overrides image CMD to drop the -landlock=false flag; env/toml control it.
-    command: ["serve", "-config", "/config/config.toml"]
+    command: ["serve", "-config", "/config/config.toml", "-seed"]
     user: "65532:65532"
     init: true
     depends_on:
@@ -173,7 +173,7 @@ services:
       - SERVICE_FQDN_RSS_DISCOVERY_8787
       - RSS_DISCOVERY_DATA_DIR=/data
       - RSS_DISCOVERY_DB_PATH=/data/rss.duckdb
-      - RSS_DISCOVERY_SEED_DIR=/data/seeds
+      - RSS_DISCOVERY_SEED_DIR=/app/seeds
       - RSS_DISCOVERY_SERVER_ADDR=0.0.0.0:8787
       - RSS_DISCOVERY_METRICS_ADDR=127.0.0.1:8788
       - RSS_DISCOVERY_LANDLOCK=true
@@ -207,7 +207,7 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 15s
+      start_period: 90s
     logging: *default-logging
 
 volumes:

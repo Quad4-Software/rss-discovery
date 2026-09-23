@@ -21,7 +21,6 @@ data/*.duckdb
 data/*.duckdb.wal
 data/*.log
 data/blobs/
-data/seeds/
 
 **/*_test.go
 **/testdata/

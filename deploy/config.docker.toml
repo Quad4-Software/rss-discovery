@@ -2,7 +2,7 @@
 
 data_dir = "/data"
 db_path = "/data/rss.duckdb"
-seed_dir = "/data/seeds"
+seed_dir = "/app/seeds"
 landlock = false
 
 [server]

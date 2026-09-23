@@ -67,6 +67,7 @@ WORKDIR /app
 COPY --from=build --chown=65532:65532 /out/rss-discovery /app/rss-discovery
 COPY --from=build --chown=65532:65532 /src/config.example.toml /app/config.example.toml
 COPY --from=build --chown=65532:65532 /src/data/blocklist.txt /app/data/blocklist.txt
+COPY --from=build --chown=65532:65532 /src/data/seeds /app/seeds
 
 ENV HOME=/data \
     XDG_CACHE_HOME=/tmp \

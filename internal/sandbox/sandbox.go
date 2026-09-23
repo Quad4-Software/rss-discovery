@@ -51,7 +51,7 @@ func Apply(dataDir, dbPath, seedDir string, listenAddrs []string, enable bool) e
 		ports[p] = struct{}{}
 	}
 
-	ro := []string{"/usr", "/lib", "/lib64", "/bin", "/sbin", "/etc/ssl", "/etc/ca-certificates", "/etc/resolv.conf", "/etc/hosts", "/etc/nsswitch.conf", "/etc/passwd"}
+	ro := []string{"/app", "/usr", "/lib", "/lib64", "/bin", "/sbin", "/etc/ssl", "/etc/ca-certificates", "/etc/resolv.conf", "/etc/hosts", "/etc/nsswitch.conf", "/etc/passwd"}
 	roDirs, roFiles := splitDirsFiles(existingOnly(ro))
 	if len(roDirs) == 0 && len(roFiles) == 0 {
 		roDirs = []string{"/usr"}
