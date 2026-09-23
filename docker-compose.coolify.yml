@@ -160,12 +160,6 @@ services:
 
   rss-discovery:
     image: ${RSS_DISCOVERY_IMAGE:-ghcr.io/quad4-software/rss-discovery:latest}
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - GO_IMAGE=docker.io/library/golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195
-        - RUNTIME_IMAGE=gcr.io/distroless/cc-debian12:nonroot@sha256:9dac0a79194e45a7da0158a9c6da57b217585af0786db3845d1f0ec1a0dd182f
     restart: unless-stopped
     user: "65532:65532"
     init: true
