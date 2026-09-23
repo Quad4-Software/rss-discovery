@@ -329,7 +329,7 @@ func isHealthOnly(path string) bool {
 
 func isPublicPath(path string) bool {
 	switch path {
-	case "/healthz", "/readyz", "/livez", "/openapi.json", "/docs", "/docs/",
+	case "/", "/healthz", "/readyz", "/livez", "/openapi.json", "/docs", "/docs/",
 		"/oauth/token", "/v1/websub/callback":
 		return true
 	default:

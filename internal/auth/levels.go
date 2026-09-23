@@ -156,8 +156,11 @@ func Allows(level Level, method, path string) bool {
 		return true
 	}
 	path = strings.TrimSuffix(path, "/")
+	if path == "" {
+		path = "/"
+	}
 	switch {
-	case path == "/healthz" || path == "/readyz" || path == "/livez" || path == "/openapi.json" || path == "/docs":
+	case path == "/" || path == "/healthz" || path == "/readyz" || path == "/livez" || path == "/openapi.json" || path == "/docs":
 		return true
 	case path == "/oauth/token" || path == "/v1/websub/callback":
 		return true

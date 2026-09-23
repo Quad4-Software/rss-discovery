@@ -70,6 +70,8 @@ func New(cfg config.Config, st *store.Store, pool *fetch.Pool, obs *observ.Runti
 }
 
 func (s *Server) routes() {
+	s.echo.GET("/", s.rootRedirect)
+	s.echo.HEAD("/", s.rootRedirect)
 	s.echo.GET("/healthz", s.healthz)
 	s.echo.GET("/livez", s.livez)
 	s.echo.GET("/readyz", s.readyz)
@@ -161,6 +163,10 @@ func listenClassic(addr string) (net.Listener, error) {
 	lc := net.ListenConfig{}
 	lc.SetMultipathTCP(false)
 	return lc.Listen(context.Background(), "tcp", addr)
+}
+
+func (s *Server) rootRedirect(c echo.Context) error {
+	return c.Redirect(http.StatusFound, "/docs")
 }
 
 func (s *Server) healthz(c echo.Context) error {
